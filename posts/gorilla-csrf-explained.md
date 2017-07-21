@@ -1,5 +1,4 @@
 # gorilla/csrf Explained
-WIP
 
 ## Why ?
 I saw a guy who posted the same question 2 days in a row, on the Gophers Slack #golang-newbies channel and decided to jump in and help!
