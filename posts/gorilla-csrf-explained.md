@@ -42,7 +42,10 @@ Sometimes you just can't serve the fronted from your backend code. Thus, you are
 Remember: 
 > This library generates unique-per-request (masked) tokens as a mitigation against the [BREACH](http://breachattack.com/) attack.
 
+* You shouldn't really care about BREACH if you use https and also send HSTS headers (which, ehm, you should - even with self-signed certs).
+
 How does this server-side validation take place? 
+
 While exchanging requests with the server, every time a secure session cookie (specifically [gorilla/securecookie](https://github.com/gorilla/securecookie)) gets sent through the wire. This cookie is of course, encrypted and only the server can decrypt. This piece of data contains the masked csrf token that can be unmasked from the client. It is easily possible to override this and just have a regular session cookie without embedded information, while storing the tokens on some key/value store (redis perhaps?) on the server side. To do that, you'd have to fork gorilla/csrf and provide a kv store-backed implementation of the following interface at [store.go](https://github.com/gorilla/csrf/blob/master/store.go):
 
 ```golang
@@ -95,8 +98,7 @@ if cs.sc == nil {
 ```
 ...which we are probably going to discuss in a different blog post.
 
-No, upon each request )()()()(,
-an attempt is being made to extract the token from the session cookie. If the token is absent (or the cookie is), a new one will be generated, but the current request is going to return 403 Forbidden. Supposing the operation was completed successfully, this extracted token is the __real__ csrf token. The next step would be to check the headers for the __X-CSRF-Token__. That token should be unmasked (XOR'd) and then compared to our previously extracted csrf token. 
+Now, upon each request, an attempt is being made to extract the token from the session cookie. If the token is absent (or the cookie is), a new one will be generated, but the current request is going to return 403 Forbidden. Supposing the operation was completed successfully, this extracted token is the __real__ csrf token. The next step would be to check the headers for the __X-CSRF-Token__. That token is masked by XORing a one-time-pad and the base csrf toke. It should be unmasked and then compared to our previously extracted csrf token. (<-- That one time pad protects from Breach as well, because in order for someone to perform a breach attack, he would need to send quite a lot of requests) 
 
 There's other magic going on towards the bottom of the function:
 ```golang
@@ -109,6 +111,10 @@ There's other magic going on towards the bottom of the function:
 ```
 
 Especially, this contextClear on the end is why not a lot of new variables are declared. I believe this is a micro-optimization in order to avoid extra memory allocations; this middleware is supposed to run upon each request... it is a requirement to be efficient!
+
+Lastly, this middleware consumes the request body in order to defend against the attack. You need to store it in the request context with another layer of middleware if you intend to use it in your own handler (...which you always do). It also provides the following middleware chain with a FailureReason for logging & reporting purposes.
+
+Hopefully you now understand a bigger fraction of the what's-going-on-under-the-hood part of your go web services :) .
 
 
 
