@@ -4,7 +4,7 @@ I'll be documenting any weird conversation or problem solving session on the Gop
 
 ### Recent Articles
 
-- [gorilla/csrf deep dive](#)
+- [gorilla/csrf explained](https://zarkopafilis.github.io/go-adventures/posts/gorilla-csrf-explained)
 
 ### About me
 I am a student. I am born in 1998. I like Java , Golang and DevOps. I don't know if I like JavaScript yet.
