@@ -1,37 +1,12 @@
-## Welcome to GitHub Pages
+## Welcome to my blog
 
-You can use the [editor on GitHub](https://github.com/Zarkopafilis/go-adventures/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+I'll be documenting any weird conversation or problem solving session on the Gophers Slack.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Recent Articles
 
-### Markdown
+- [gorilla/csrf deep dive](#)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Zarkopafilis/go-adventures/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### About me
+I am a student. I am born in 1998. I like Java , Golang and DevOps. I don't know if I like JavaScript yet.
+I also like doing stuff, like playing paintball, going out with friends, training MMA, swimming, etc.
+If you want to find out more stuff about me just [google me](https://www.google.gr/search?q=Zarkopafilis).
