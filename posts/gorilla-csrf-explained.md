@@ -111,10 +111,6 @@ There's other magic going on towards the bottom of the function:
 
 Especially, this contextClear on the end is why not a lot of new variables are declared. I believe this is a micro-optimization in order to avoid extra memory allocations; this middleware is supposed to run upon each request... it is a requirement to be efficient!
 
-Lastly, this middleware consumes the request body in order to defend against the attack. You need to store it in the request context with another layer of middleware if you intend to use it in your own handler (...which you always do). It also provides the following middleware chain with a FailureReason for logging & reporting purposes.
+Lastly, this middleware consumes the request body in order to defend against the attack. You need to store it in the request context with another layer of middleware if you intend to use it in your own handler. You can still read the form data in the following handlers.
 
 Hopefully you now understand a bigger fraction of the what's-going-on-under-the-hood part of your go web services :) .
-
-
-
-
