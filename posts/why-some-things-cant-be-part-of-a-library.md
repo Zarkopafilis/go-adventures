@@ -34,3 +34,5 @@ Moving the testing code (which could be regex, checking prefixes or whatever) fr
 
 ### Conclusion
 This may not be the best example because allowed Origins is not something that you change that frequently (if ever, after your code makes it into production), but you get the point...
+
+Due to how trivial this example is, I created the PR including the [Add AllowedOriginRegexValidator PR](https://github.com/gorilla/handlers/pull/109) and I'm currently awaiting for feedback, from the community or the gorilla team.
