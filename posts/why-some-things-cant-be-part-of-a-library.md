@@ -27,7 +27,7 @@ Assume this gets integrated into the library. People are going to start using it
 1. Regex gets compiled at runtime
 2. You can't unit test the actual regex easily, without using some global constant, or having some code duplication, because it's wrapped around the library's code.
 
-Libraries shouldn't really panic that way, on runtime, just because the user provided wrong data/functions; libraries should return errors that their users can handle (or ignore and have their program crash __:)__ ). Libraries shouldn't log stuff either. Panics should happen only due to programmer errors, if that programmer is the creator of the library.
+Libraries shouldn't really panic that way, on runtime, just because the user provided wrong data/functions; libraries should return errors that their users can handle (or ignore and have their program crash __:)__ ). Libraries shouldn't log stuff either. Panics should happen only due to programmer errors, if that programmer is the creator of the library. In this specific case, I could recover() from the panic and return an error, but there is no room to do that due to the design of the library; errors are not supposed to happen (and really, they don't - you just pass string contstants as a slice...) on that stage.
 
 OK, one could claim that it's not that bad of a choice because it would just fail to start. Well, not everyone has a staging environment and many people just treat CI builds that pass tests as good to go. Nobody wants stuff breaking in production.
 
