@@ -1,5 +1,5 @@
 # Project-Package Structure
-WIP
+
 ## Why?
 Jumped into #go-kit channel in slack, then jumped into go-kit github in order to read their examples. No notes on packages or project structure! This lead to some intresting discussions at slack.
 
