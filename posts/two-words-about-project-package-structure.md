@@ -23,4 +23,4 @@ Anyway, let's get started:
 
 6. Never, ever have your unit tests in a separate directory from the thing you are testing. Also, don't move all the integration tests on a single test package/folder; place them at the correct scope (regarding to what they are testing).
 
-Helpful extra link: https://stackoverflow.com/questions/14867452/what-is-a-sensible-way-to-layout-a-go-project
+Helpful extra link: [Stack overfloooow](https://stackoverflow.com/questions/14867452/what-is-a-sensible-way-to-layout-a-go-project)
