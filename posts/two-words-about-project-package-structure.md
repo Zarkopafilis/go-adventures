@@ -1,10 +1,12 @@
-#Project-Package Structure
+# Project-Package Structure
 WIP
-##Why?
+## Why?
 Jumped into #go-kit channel in slack, then jumped into go-kit github in order to read their examples. No notes on packages or project structure! This lead to some intresting discussions at slack.
-##Foreword
+
+## Foreword
 I'm sure most of the newcomers will read some project structure guide or article within their first 2 weeks in the language. Everybody has read this [Medium post on standard package layout](https://medium.com/@benbjohnson/standard-package-layout-7cdbc8391fc1#.ds38va3pp); If you haven't, you should go there and read it immediately.
-##No Examples
+
+## No Examples
 As a newcomer, I did not enounter any official guide regarding project structure. The only resources I found (besides googling) was those @gopher newbie resources whispered to me. Me and other people have questions that were not able to be resolved without human interaction. I'll try to sum up everything I've learned here.
 
 > This issue seems similar to the problem Maven tried to fix, coming after Ant: "standarizing" the project and package layout. Is __go dep__ and similar tools going to be deeply integrated into IDEs and evolve into layout standarizers? Who knows.
