@@ -19,7 +19,7 @@ Anyway, let's get started:
 
 3. 2, with your main package bootstrapping every service you may need, makes testing a lot easier :) .
 
-4. Keep your main packages under `cmd/{name}/main.go` in order to let other parts of your project be used as a library.
+4. Keep your main packages under `cmd/{name}/main.go` in order to let other parts of your project be used as a library. If your project is primarily and app, put the main.go at the roor, so it can be downloaded with go get, without appending `/cmd/{name}` to the end of the url. In the future, you can add new main.go's under __cmd__ as described above!
 
 5. This one is for the monolith who would want to be chopped up into microservices in the future. Tightly-coupled dependencies should go under __internal/services/{name}__, while code that could be a separate library or be integrated into more projects, should live under __internal/platform/{name}__. You could stick to __internal/{name}__ for some other (edge-case) chunks of code but avoid it if you can (?), because it may evolve into chaos.
 
