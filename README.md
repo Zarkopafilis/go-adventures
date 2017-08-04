@@ -1,10 +1,11 @@
 ## Welcome to my blog
 
-I'll be documenting any weird conversation or problem solving session on the Gophers Slack.
+I'll be documenting any weird conversation or problem solving session on the Gophers Slack, or any thoughts on go, really. :)
 
 ### Recent Articles
 
 - [gorilla/csrf explained](https://zarkopafilis.github.io/go-adventures/posts/gorilla-csrf-explained)
+- [From Java and Spring-Boot to Just Go](https://zarkopafilis.github.io/go-adventures/posts/java-sboot-to-go)
 - [2 Words about project-package structure](https://zarkopafilis.github.io/go-adventures/posts/two-words-about-project-package-structure)
 - [Why some things can't be part of a library](https://zarkopafilis.github.io/go-adventures/posts/why-some-things-cant-be-part-of-a-library)
 
