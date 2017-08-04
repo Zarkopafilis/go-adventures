@@ -19,6 +19,7 @@ I'll first outline what made it hard (or sometimes, easier), to learn to write w
 - Migrations and Schema Generation
 - Easy Cloud Native apps (Distributed tracing, Discovery, Configuration Servers, etc)
 
+For a, perhaps, full list you could head over to (Spring Initializr)[http://start.spring.io/] or (microprofile)[https://microprofile.io]
 
 > Remember : Due to the structure and the metaprogramming involved in the architecture of the applications, there is no need to change almost none of your code to add extra functionality; for example, turning on csrf protection on par with a server-side templating engine, just works out of the box because components are detected automatically, adding authentication is being applied to every controller by default and you just have to tell it what is allowed to be accessed, by what user group (or role). No middleware chain additions are needed. Such middleware chain(s) are not something you actually write in Java - components are multiplexed together automatically based on priorities, demands and dependencies.
 
