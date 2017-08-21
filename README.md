@@ -4,7 +4,7 @@ I'll be documenting any weird conversation or problem solving session on the Gop
 
 ### Recent Articles
 
-- [gorilla/csrf explained](https://zarkopafilis.github.io/go-adventures/posts/gorilla-csrf-explained)
+- [gorilla/csrf explained](https://medium.com/@zarkopafilis/gorilla-csrf-explained-843c9957800d)
 - [From Java and Spring-Boot to Just Go](https://zarkopafilis.github.io/go-adventures/posts/java-sboot-to-go)
 - [2 Words about project-package structure](https://zarkopafilis.github.io/go-adventures/posts/two-words-about-project-package-structure)
 - [Why some things can't be part of a library](https://zarkopafilis.github.io/go-adventures/posts/why-some-things-cant-be-part-of-a-library)
