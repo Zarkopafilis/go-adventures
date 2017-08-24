@@ -4,6 +4,7 @@ I'll be documenting any weird conversation or problem solving session on the Gop
 
 ### Recent Articles
 
+- [Building a CI System for Go, with Jenkins](https://medium.com/@zarkopafilis/building-a-ci-system-for-go-with-jenkins-4ab04d4bacd0)
 - [gorilla/csrf explained](https://medium.com/@zarkopafilis/gorilla-csrf-explained-843c9957800d)
 - [From Java and Spring-Boot to Just Go](https://zarkopafilis.github.io/go-adventures/posts/java-sboot-to-go)
 - [2 Words about project-package structure](https://zarkopafilis.github.io/go-adventures/posts/two-words-about-project-package-structure)
